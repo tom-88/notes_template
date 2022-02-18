@@ -1,0 +1,72 @@
+%%%%% Document Setup %%%%%%%%
+
+\documentclass[12pt, onecolumn]{revtex4}    % Font size (12pt) and column number (one or two).
+
+\usepackage{times}                          % Times New Roman font type
+
+\usepackage[a4paper, left=2.5cm, right=2.5cm,
+ top=2.5cm, bottom=2.5cm]{geometry}       % Defines paper size and margin length
+
+\renewcommand{\baselinestretch}{1.15}     % Defines the line spacing
+
+\usepackage[font=small,
+labelfont=bf]{caption}                      % Defines caption font size and caption title bolded
+
+\usepackage{graphics,graphicx,epsfig,ulem}  % Makes sure all graphics works
+\usepackage{amsmath}                        % Adds mathematical features for equations
+\usepackage{braket}
+\usepackage{xcolor}
+
+\usepackage{etoolbox}                       % Customise date to preferred format
+\makeatletter
+\patchcmd{\frontmatter@RRAP@format}{(}{}{}{}
+\patchcmd{\frontmatter@RRAP@format}{)}{}{}{}
+\renewcommand\Dated@name{}
+\makeatother
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}                           % Insert header
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\small Firstname Surname}                          % Your name
+\rhead{\small Notes Title}            % Your report title               
+
+\def\thesection{\arabic{section}}
+
+\def\bibsection{\section*{References}}        % Position reference section correctly
+
+
+%%%%% Document %%%%%
+\begin{document}
+
+
+\title{Notes on}
+\date{Last edited: \today{}}
+\author{Firstname Surname}
+
+
+\begin{abstract}
+Very short summary
+
+\end{abstract}
+
+
+\maketitle
+%\thispagestyle{plain} % produces page number for front page
+
+\tableofcontents
+\newpage
+
+\section{Section 1}
+
+\begin{thebibliography}{}
+
+\bibitem{ref01} A.~N.~Other, Title of the book, edition, publishers, place of publication (year of publication), p.~123.   % example book reference 
+
+\end{thebibliography}
+
+
+\end{document}
+
+
